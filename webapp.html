@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions & Passwords</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+
+html {
+  scroll-behavior: smooth;
+}
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+
+            
+            background-image: linear-gradient(rgb(9 8 10 / 80%), rgb(0 0 0 / 50%)), url('background.jpg');
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+
+        #intro {
+        
+
+            background: linear-gradient(to right, #faffff, #9fd1c8);
+}
+        
+
+
+        .text-primary {
+            color: #a513df !important;
+        }
+
+        .bg-primary {
+            background-color: #a513df !important;
+        }
+
+        .btn-primary {
+            background-color: #a513df !important;
+            border: 1px solid #a513df !important;
+        }
+        
+
+        .btn-primary:hover {
+            color: #fff;
+            background-color: #73079e !important;
+            border-color: #73079e !important;
+            box-shadow: 2px 2px 15px 5px #73079e !important;
+        }
+
+        .form-control:focus {
+            border-color: #ff00bf;
+            box-shadow: 0 0 0 0.2rem rgba(241, 4, 182, 0.25);
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        hr {
+            border: 3px solid rgb(205, 26, 221);
+            width: 200px;
+            border-radius: 5px;
+        }
+
+        .rounded {
+            border-radius: 25px !important;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="intro" class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 mb-3">Transactions & Passwords made easy!</h1>
+            <p class="lead">Manage all your monetary transactions and account passwords in one place. </p>
+            <p>Easy to use and user-friendly. Get started in no time!</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg mt-3 shadow-lg" href="#services" role="button">Learn more</a>
+            </p>
+        </div>
+    </div>
+
+    <section id="services">
+        <h2 class="text-center text-primary"><b>SERVICES</b></h2>
+        <hr>
+        <div class="container-fluid text-center">
+
+
+            <div class="row mt-5">
+                <div class="col-12 col-sm-12 col-md-6 offset-md-3">
+                    <img class="img-fluid border shadow" style="border-radius: 20px;" width="80%" src="money.jpg"><br>
+                    <button class="mt-5 btn btn-primary btn-lg shadow" data-toggle="collapse"
+                        data-target="#transaction">Manage Transactions</button>
+
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 collapse" id="transaction">
+                    <div class="row">
+                        <div id="display_transaction" class="col-12 col-md-7 border p-4 shadow rounded ml-5 bg-light"
+                            style="max-height: 550px; overflow-y: scroll;">
+                            <h4>Your Transactions</h4><hr>
+
+                            <!-- <p class="mt-5">
+                            <h5><span class="badge badge-pill bg-info p-2">Jan 2020</span></h5>
+                            </p> -->
+                            <!-- <div class="row shadow p-2 "
+                                style="border-left: 15px solid #28a745; background-color: white;">
+                                <div class="d-inline col-3">Income</div>
+                                <div class="d-inline col-3">Rent</div>
+                                <div class="d-inline col-3">Income</div>
+                                <div class="d-inline col-3">Rent <button class=" ml-5 btn btn-sm btn-info" data-toggle="collapse"
+                                    data-target="#description_0"><span class="fa fa-arrow-down"></span></button></div>
+                            </div>
+                            <p id="description_0" class="mt-2 collapse">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint consectetur incidunt natus, voluptate voluptatibus quam, velit illum ipsum culpa modi dolores omnis numquam labore beatae. Temporibus quia assumenda possimus optio!</p> -->
+
+                        </div>
+                        <div class="col-12 col-md-4 border rounded shadow p-3 ml-4 bg-light">
+                            <h5>Add Transaction</h5>
+                            <hr />
+                            <form class="mt-5" name="transaction">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Type :</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control shadow" name="type">
+                                            <option value="INCOME">INCOME</option>
+                                            <option value="EXPENSE">EXPENSE</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Catagory :</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="catagory" class="form-control shadow"
+                                            placeholder="Eg: Salary/ Petrol expense etc">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Date :</label>
+                                    <div class="col-sm-8">
+                                        <input type="date" name="date" class="shadow form-control"
+                                            placeholder="Eg: Salary/ Petrol expense etc">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Amount :</label>
+                                    <div class="col-sm-8">
+                                        <input type="number" name="amount" class="form-control shadow"
+                                            placeholder="$$$$">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <textarea name="description" class="offset-sm-3 form-control col-sm-8 shadow"
+                                            placeholder="Add Desciption" rows='3'></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                            <button class="btn btn-primary shadow mt-4" onClick="addTransaction()">Add
+                                Transaction</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+          
+               
+            </p>
+            <div class="row mt-5">
+                <div class="col-12 col-sm-12 col-md-6 offset-md-3">
+                    <img class="img-fluid border shadow" style="border-radius: 20px;" width="80%"
+                        src="password.jpg"><br>
+                    <button class="mt-5 btn btn-primary btn-lg" data-toggle="collapse" data-target="#password">Manage
+                        Passwords</button>
+                </div>
+            </div>
+
+
+            <div class="row mt-5">
+                <div class="col-12 collapse" id="password">
+                    <div class="row">
+                        <div id="display_password" class="col-12 col-md-7 border p-4 shadow rounded ml-5 bg-light"
+                            style="max-height: 550px; overflow-y: scroll;">
+                            <h4>Your Passwords</h4><hr>
+                        </div>
+
+
+                        <div class="col-12 col-md-4 border rounded shadow p-3 ml-4 bg-light">
+                            <h5>Add Password</h5>
+                            <hr />
+
+                            <form class="mt-5" name="password">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Organization</label>
+
+                                    <div class="col-sm-8">
+                                        <input type="text" name="org" class="form-control shadow"
+                                            placeholder="Eg: Facebook / Paytm etc">
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">ID/Email :</label>
+                                    <div class="col-sm-8">
+                                        <input type="email" name="email" class="form-control shadow"
+                                            placeholder="Eg: abc@gmail.com">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Password :</label>
+                                    <div class="col-sm-8">
+                                        <input type="password" name="password" class="form-control shadow"
+                                            placeholder="*****************">
+                                    </div>
+                                </div>
+
+                            </form>
+
+                            <button class="btn btn-primary shadow mt-4" onClick="addPassword()">Add Password</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+    </section>
+    <br>
+    <footer class="text-center text-warning mt-5">Developed by Ritesh Gupta</footer>
+
+</body>
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+
+<script src="app.js"></script>
+<script>
+    $(document).ready(function () {
+        $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+    });
+</script>
+
+</html>
