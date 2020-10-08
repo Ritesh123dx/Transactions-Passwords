@@ -126,8 +126,14 @@ displayTransaction = () => {
             if(element.type === 'INCOME')   income += element.amount
             else expense += element.amount
         })
+
+        let net = income - expense
+        if (net > 0)    net = "+ " + net.toString();
+        
         div.innerHTML += ` <p class="mt-5"><h4><span class="badge bg-secondary p-2" >${displayDate(element)}</span><span class="ml-5 fa fa-circle text-success" style="font-size: 15px"> </span><span class="mx-1" style="font-size: smaller"><span class="ml-2 fa fa-inr"></span> ${income}</span>
         <span class="ml-1 fa fa-circle text-danger" style="font-size: 15px"> </span><span class="mx-1" style="font-size: smaller"><span class="ml-2 fa fa-inr"></span> ${expense}</span>
+
+        <span class="ml-1 fa fa-circle text-info" style="font-size: 15px"> </span><span class="mx-1" style="font-size: smaller"><span class="ml-2 fa fa-inr"></span> ${net}</span>
         </h4></p>`
    
         transaction[element].forEach((element) => {
