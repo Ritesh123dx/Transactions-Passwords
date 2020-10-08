@@ -198,7 +198,7 @@ displayPassword = () => {
         <div class="row shadow p-2 mt-3 bg-light rounded" style="border: 3px solid #0bc5d5;">
             <div class="col-3 text-left"><span class="fa fa-square mr-1 text-info" style="font-size:13px"> </span>${element.org}</div>
             <div class="col-4 text-left"><span class="fa fa-user mr-1 text-info" style="font-size:17px"> </span>${element.email}</div>
-            <div class="col-5 text-left"><p id="hide_password_${index}" class="d-inline">${p}</p><p id="show_password_${index}" class="d-none" style="font-size : 15px;">${element.password}</p> <span class="fa fa-lock ml-3" style="font-size : 22px;" onclick="showPass(this,${index})"> </span> <span class="fa fa-clone ml-2" style="font-size : 20px; cursor : pointer;" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard" onclick="copyPass(${index})"> </span></div>
+            <div class="col-5 text-center"><p id="hide_password_${index}" class="d-inline">${p}</p><p id="show_password_${index}" class="d-none" style="font-size : 15px;">${element.password}</p> <span class="fa fa-lock ml-3" style="font-size : 22px;" onclick="showPass(this,${index})"> </span> <span class="fa fa-clone ml-2" style="font-size : 20px; cursor : pointer;" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard" onclick="copyPass(${index})"> </span></div>
         </div>`
     })
 
