@@ -20,31 +20,31 @@ addTransaction = () => {
 
     // console.log(type, catagory, date, amount, typeof(amount), description);
 
-    // if (catagory.length === 0 || catagory === " "){
-    //     alert("Plz enter catagory");
-    //     form.catagory.focus();
-    //     return false;
-    // }
-    // if (date.length === 0 || date === ""){
-    //     alert("Plz enter date");
-    //     form.date.focus();
-    //     return false;
-    // }
-    // if (isNaN(amount)){
-    //     alert("Plz enter amount");
-    //     form.amount.focus();
-    //     return false;
-    // }
-    // if (description.length === 0 || description === ""){
-    //     alert("Plz enter description");
-    //     form.description.focus();
-    //     return false;
-    // }
+    if (catagory.length === 0 || catagory === " "){
+        alert("Plz enter catagory");
+        form.catagory.focus();
+        return false;
+    }
+    if (date.length === 0 || date === ""){
+        alert("Plz enter date");
+        form.date.focus();
+        return false;
+    }
+    if (isNaN(amount)){
+        alert("Plz enter amount");
+        form.amount.focus();
+        return false;
+    }
+    if (description.length === 0 || description === ""){
+        alert("Plz enter description");
+        form.description.focus();
+        return false;
+    }
 
 
 
-    // date = new Date(date);
-    console.log(date);
+   
+    
     day = date.slice(8);
     date = date.slice(0,7);  //"2020-10" ==> "year-month"
 
@@ -89,7 +89,6 @@ addTransaction = () => {
 
  
 
-    console.log(transaction)
 
      displayTransaction();
 
@@ -113,7 +112,7 @@ displayTransaction = () => {
     let keys = Object.keys(transaction);
     keys.sort();
     keys.reverse();
-    console.log(keys);
+    
     let div = document.getElementById("display_transaction");
     div.innerHTML = '<h4>Your Transactions</h4><hr>';
 
@@ -182,7 +181,7 @@ addPassword = () => {
     });
 
     displayPassword();
-    console.log(org, email, password);
+    
 }
 
 displayPassword = () => {
@@ -206,9 +205,7 @@ displayPassword = () => {
 
 
 showPass = (element, index) => {
-    console.log(element);
-    console.log(element.classList)
-    console.log("Index ",index, typeof(index));
+    
     
     let hide_pass = document.getElementById("hide_password_" + index);
     let show_pass =  document.getElementById("show_password_"+index);
